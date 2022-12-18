@@ -1,0 +1,23 @@
+  #!/bin/bash
+
+  # this will clear the terminal
+  Clear
+
+  # update package list
+  sudo apt-get update
+
+  # echo "" will write a empty line in the terminal
+  echo ""
+
+  # sleep 2 will wait 2 seconds before the next command will start
+  sleep 2
+
+  # upgrade all installed packages
+  sudo apt-get upgrade
+
+  echo ""
+
+  sleep 2
+
+  # clean up obsolete packages
+  sudo apt-get autoremove 

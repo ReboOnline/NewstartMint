@@ -1,0 +1,192 @@
+#!/bin/bash
+
+clear   #--This will clear the  terminal before the start--
+
+echo "##########################################################"
+echo "Install UP file to"
+chmod +x up
+sudo cp up /usr/local/bin
+sleep 2
+# Now we can copy the file using the 'cp' command
+echo "Now we can copy the file using the 'cp' command"
+sleep 2
+cp up /usr/local/bin
+echo "Checking if the copy was successful"
+sleep 3
+# Check if the copy was successful
+if [ $? -eq 0 ]; then
+  echo "File successfully copied"
+else
+  echo "Error copying file"
+fi
+echo ""
+echo ""
+echo "##########################################################"
+echo "Start install"
+sleep 2
+echo ""
+echo ""
+echo "##########################################################"
+echo "Turn on the firewall" #sudo ufw disable - to disable the firewall
+sleep 2
+sudo ufw enable
+echo ""
+echo ""
+echo "##########################################################"
+echo "Refresh available updates" #This will refresh available updates
+sleep 2
+sudo apt-get update
+echo ""
+echo ""
+echo "##########################################################"
+echo "Upgrade all packages" #This will Upgrade all packages
+sleep 2
+sudo apt-get upgrade -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Caffeine" #Caffeine keeps your monitor awake
+sleep 2
+sudo apt-get install caffeine -yy
+echo ""
+echo ""
+echo "#########################################################"
+echo "Install variety" #Variety is the best besktop background manager
+sleep 2
+sudo apt install variety -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Gparted" #Gparted lets you set partitions 
+sleep 2
+sudo apt install gparted -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Gimp" # Gimp is the best photo editor 
+sleep 2
+sudo apt install gimp -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Plank" #Plank is an good icon dock 
+sleep 2
+sudo apt install plank -yy
+sleep 1
+# Now we can copy the file using the 'cp' command
+echo "Now we can copy the file using the 'cp' command"
+sleep 2
+cp plank.desktop ~/.config/autostart
+echo "Checking if the copy was successful"
+sleep 3
+# Check if the copy was successful
+if [ $? -eq 0 ]; then
+  echo "File successfully copied"
+else
+  echo "Error copying file"
+fi
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Nemo" #Neno is an simple but good commandline editor
+sleep 2
+sudo apt install nemo -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install dconf-editor, git, dmenu, flameshot, sublime-text, simplescreenrecorder" #
+sudo apt install -yy dconf-editor
+sleep 2
+sudo apt install -yy git
+sleep 2
+sudo apt install -yy neofetch
+sleep 2
+sudo apt install -yy dmenu
+sleep 2
+sudo apt install -yy flameshot
+sleep 2
+sudo apt install -yy sublime-text
+sleep 2
+sudo apt install -yy simplescreenrecorder
+sleep 2
+#Installed via keys and repo add
+sudo apt install -yy atom
+sleep 2
+sudo apt install -yy code
+sleep 2
+sudo apt install -yy spotify-client
+sleep 2
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install preload" #Preload lets your programms load faster
+sleep 2
+sudo apt install preload -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "installing Kodi" #Kodi is a good mediapalyer
+sleep 2
+sudo apt install software-properties-common 
+sudo add-apt-repository -ysP team-xbmc/ppa
+sudo apt install kodi -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Installing U-care-system-core" #ucaresystem-core is een update en schoonmaak programma voor Ubuntu based linux via de terminal
+sleep 2
+sudo add-apt-repository ppa:utappia/stable
+sudo apt-get update
+sudo apt-get install ucaresystem-core -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Installing Stacer" #Stacer is een system monitor
+sleep 2
+sudo add-apt-repository ppa:oguzhaninan/stacer -y
+sudo apt-get update
+sudo apt-get install stacer -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Installing gdebi" #Gdebi is a utility tool that works as an alternative to your default Software Center for installing applications – specifically, .deb packages while resolving and installing its dependencies and you can use it right from your terminal.
+sleep 2
+sudo apt-get install gdebi -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Ubuntu Restricted Extras (Media Codecs):" #This are some codecs you need down the road of music and video 
+sleep 2
+sudo apt install ubuntu-restricted-extras
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Htop" #this a nice commandline system monitor
+sleep 2
+sudo apt update && sudo apt upgrade -yy
+sudo apt-get htop
+echo ""
+echo ""
+echo "##########################################################"
+echo "######################Remove some software################"
+echo "##########################################################"
+sleep 2
+sudo apt remove -yy hexchat
+#echo ""
+#echo ""
+#echo "##########################################################"
+#echo "##########################################################"
+#echo "Starting Ucaresystem"
+#ucaresystem-core
+echo ""
+echo ""
+echo "##########################################################"
+echo "#############All done now, you can type exit##############"
+echo "##########################################################"
+#echo "Install " #
+#sleep 2
+#sudo apt install  -yy
+#echo ""
+#echo ""
+#echo "##########################################################"
+
