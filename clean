@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Remove unnecessary or unused packages
+sudo apt-get autoremove
+  
+# Clear the package cache
+sudo apt-get clean
+  
+# Remove old kernels
+sudo apt-get purge-old-kernels
+  
+# Remove temporary files
+sudo tmpreaper
+  
+# Compact the filesystem
+sudo e4defrag /
+  
+# Remove log files
+sudo logrotate -f /etc/logrotate.conf
