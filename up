@@ -4,6 +4,7 @@
   Clear
 
   # update package list
+  echo "Looking for updates"
   sudo apt-get update
 
   # echo "" will write a empty line in the terminal
@@ -13,7 +14,17 @@
   sleep 2
 
   # upgrade all installed packages
+  echo "Installing all updates if needed"
   sudo apt-get upgrade
+
+  echo ""
+
+  sleep 2
+
+  # update flatpack programs
+  echo "Looking for flatpack updates"
+
+  flatpak update
 
   echo ""
 
