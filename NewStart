@@ -1,16 +1,31 @@
 #!/bin/bash
 
-clear   #--This will clear the  terminal before the start--
-
 echo "##########################################################"
-echo "Install UP file to"
+echo "Installing the UP file to '/usr/local/bin'"
 chmod +x up
-sudo cp up /usr/local/bin
 sleep 2
 # Now we can copy the file using the 'cp' command
 echo "Now we can copy the file using the 'cp' command"
 sleep 2
 cp up /usr/local/bin
+echo "Checking if the copy was successful"
+sleep 3
+# Check if the copy was successful
+if [ $? -eq 0 ]; then
+  echo "File successfully copied"
+else
+  echo "Error copying file"
+fi
+echo ""
+echo ""
+echo "##########################################################"
+echo "Installing the 'UIT' file to '/usr/local/bin'"
+chmod +x uit
+sleep 2
+# Now we can copy the file using the 'uit' command
+echo "Now we can copy the file using the 'UIT' command"
+sleep 2
+cp uit /usr/local/bin
 echo "Checking if the copy was successful"
 sleep 3
 # Check if the copy was successful
@@ -122,6 +137,14 @@ echo "##########################################################"
 echo "Install preload" #Preload lets your programms load faster
 sleep 2
 sudo apt install preload -yy
+echo ""
+echo ""
+echo "##########################################################"
+echo "Install Discord" #Discord is Discord 
+sleep 2
+wget -O ~/discord.deb https://discord.com/api/download?platform=linux&format=deb
+sudo dpkg -i ~/discord.deb
+sudo apt --fix-broken install
 echo ""
 echo ""
 echo "##########################################################"
