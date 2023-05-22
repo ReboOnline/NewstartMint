@@ -1,0 +1,9 @@
+#!/bin/bash
+echo ""
+sleep 2
+echo "The computer wil Reboot now"
+sleep 1
+echo "Until we meet again"
+sleep 1
+clear ##-----clear the terminal-----##
+reboot
