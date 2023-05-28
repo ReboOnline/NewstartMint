@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "##########################################################"
-echo "Installing the UP file to '/usr/local/bin'"
+echo "Making "up" exeutble to copy to '/usr/local/bin'"
 chmod +x up
 sleep 2
 # Now we can copy the file using the 'cp' command
@@ -19,7 +19,7 @@ fi
 echo ""
 echo ""
 echo "##########################################################"
-echo "Installing the 'UIT' file to '/usr/local/bin'"
+echo "Making "uit" exeutble to copy to '/usr/local/bin'"
 chmod +x uit
 sleep 2
 # Now we can copy the file using the 'uit' command
@@ -30,18 +30,18 @@ echo "Checking if the copy was successful"
 sleep 3
 # Check if the copy was successful
 if [ $? -eq 0 ]; then
-  echo "File successfully copied"
+  echo "File "uit" successfully copied"
 else
-  echo "Error copying file"
+  echo "Error "uit" copying file"
 fi
 echo ""
 echo ""
 echo "##########################################################"
-echo "Installing the 'reboot' file to '/usr/local/bin'"
-chmod +x uit
+echo "Making "reboot" exeutble to copy to '/usr/local/bin'"
+chmod +x reboot
 sleep 2
 # Now we can copy the file using the 'REBOOT' command
-echo "Now we can copy the file using the 'UIT' command"
+echo "Now we can copy the file using the 'reboot' command"
 sleep 2
 cp reboot /usr/local/bin
 echo "Checking if the copy was successful"
