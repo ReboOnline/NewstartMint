@@ -216,14 +216,12 @@ sudo apt remove -yy hexchat
 #echo ""
 #echo ""
 #echo "##########################################################"
-#echo "##########################################################"
-#echo "Starting Ucaresystem"
-#ucaresystem-core
 echo ""
 echo ""
 echo "##########################################################"
 echo "#############All done now, you can type exit##############"
 echo "##########################################################"
+#echo "THIS IS A NEW BLOCK FOR NEW CODE, JUST COPY AND PASTE"
 #echo "Install " #
 #sleep 2
 #sudo apt install  -yy
