@@ -4,10 +4,10 @@ echo "##########################################################"
 echo "Making "up" exeutble to copy to '/usr/local/bin'"
 chmod +x up
 sleep 2
-# Now we can copy the file using the 'cp' command
+# Now I can copy the file using the 'cp' command
 echo "Now we can copy the file using the 'cp' command"
 sleep 2
-cp up /usr/local/bin
+sudo cp up /usr/local/bin
 echo "Checking if the copy was successful"
 sleep 3
 # Check if the copy was successful
@@ -22,10 +22,10 @@ echo "##########################################################"
 echo "Making "uit" exeutble to copy to '/usr/local/bin'"
 chmod +x uit
 sleep 2
-# Now we can copy the file using the 'uit' command
+# Now I can copy the file using the 'uit' command
 echo "Now we can copy the file using the 'UIT' command"
 sleep 2
-cp uit /usr/local/bin
+sudo cp uit /usr/local/bin
 echo "Checking if the copy was successful"
 sleep 3
 # Check if the copy was successful
@@ -38,12 +38,12 @@ echo ""
 echo ""
 echo "##########################################################"
 echo "Making "reboot" exeutble to copy to '/usr/local/bin'"
-chmod +x reboot
+chmod +x restart
 sleep 2
-# Now we can copy the file using the 'REBOOT' command
+# Now I can copy the file using the 'restart' command
 echo "Now we can copy the file using the 'reboot' command"
 sleep 2
-cp reboot /usr/local/bin
+sudo cp restart /usr/local/bin
 echo "Checking if the copy was successful"
 sleep 3
 # Check if the copy was successful
@@ -55,11 +55,6 @@ fi
 echo ""
 echo ""
 echo "##########################################################"
-echo "Start install"
-sleep 2
-echo ""
-echo ""
-echo "##########################################################"
 echo "Turn on the firewall" #sudo ufw disable - to disable the firewall
 sleep 2
 sudo ufw enable
@@ -68,7 +63,7 @@ echo ""
 echo "##########################################################"
 echo "Refresh available updates" #This will refresh available updates
 sleep 2
-sudo apt-get update
+sudo apt-get update -yy
 echo ""
 echo ""
 echo "##########################################################"
@@ -198,7 +193,7 @@ echo ""
 echo "##########################################################"
 echo "Install Ubuntu Restricted Extras (Media Codecs):" #This are some codecs you need down the road of music and video 
 sleep 2
-sudo apt install ubuntu-restricted-extras
+sudo apt install ubuntu-restricted-extras -yy
 echo ""
 echo ""
 echo "##########################################################"
