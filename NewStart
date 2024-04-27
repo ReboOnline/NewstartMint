@@ -1,13 +1,31 @@
 #!/bin/bash
 
 echo "##########################################################"
-echo "Making "up" exeutble to copy to '/usr/local/bin'"
-chmod +x up
+echo "Making "update_ucaresystem-core" exeutble to copy to '/usr/local/bin'"
+chmod +x update_ucaresystem-core
 sleep 2
 # Now I can copy the file using the 'cp' command
 echo "Now we can copy the file using the 'cp' command"
 sleep 2
-sudo cp up /usr/local/bin
+sudo cp update_ucaresystem-core /usr/local/bin
+echo "Checking if the copy was successful"
+sleep 3
+# Check if the copy was successful
+if [ $? -eq 0 ]; then
+  echo "File successfully copied"
+else
+  echo "Error copying file"
+fi
+echo ""
+echo ""
+echo "##########################################################"
+echo "Making "upgrade_ucaresystem-core" exeutble to copy to '/usr/local/bin'"
+chmod +x upgrade_ucaresystem-core
+sleep 2
+# Now I can copy the file using the 'cp' command
+echo "Now we can copy the file using the 'cp' command"
+sleep 2
+sudo cp upgrade_ucaresystem-core /usr/local/bin
 echo "Checking if the copy was successful"
 sleep 3
 # Check if the copy was successful
@@ -37,21 +55,62 @@ fi
 echo ""
 echo ""
 echo "##########################################################"
-echo "Making "reboot" exeutble to copy to '/usr/local/bin'"
-chmod +x restart
+echo "Install " #
 sleep 2
-# Now I can copy the file using the 'restart' command
-echo "Now we can copy the file using the 'reboot' command"
-sleep 2
-sudo cp restart /usr/local/bin
-echo "Checking if the copy was successful"
-sleep 3
-# Check if the copy was successful
-if [ $? -eq 0 ]; then
-  echo "File reboot successfully copied"
+# Verlaag de swappiness-waarde naar 5
+echo "Verlagen van swappiness-waarde naar 5..."
+sudo sysctl vm.swappiness=5
+
+# Controleer of de wijziging is doorgevoerd
+echo "Controleren of de swappiness-waarde is verlaagd..."
+current_swappiness=$(cat /proc/sys/vm/swappiness)
+if [ "$current_swappiness" -eq 5 ]; then
+    echo "Swappiness-waarde is succesvol verlaagd naar 5."
 else
-  echo "Error copying file"
+    echo "Er is een probleem opgetreden bij het verlagen van de swappiness-waarde."
 fi
+
+# Maak de wijziging permanent
+echo "De nieuwe instellingen permanent maken..."
+echo "vm.swappiness=5" | sudo tee -a /etc/sysctl.conf > /dev/null
+
+# Laden van nieuwe instellingen
+echo "Nieuwe instellingen toepassen..."
+sudo sysctl -p
+
+# Opnieuw controleren of de wijziging permanent is
+echo "Opnieuw controleren van de swappiness-waarde..."
+current_swappiness=$(cat /proc/sys/vm/swappiness)
+if [ "$current_swappiness" -eq 5 ]; then
+    echo "Swappiness-waarde is permanent ingesteld op 5."
+else
+    echo "Er is een probleem opgetreden bij het permanent instellen van de swappiness-waarde."
+fi
+echo ""
+echo ""
+echo "##########################################################"
+# Update package lists en installeer essentiële updates
+sudo apt update
+sudo apt upgrade -y
+
+# Installeer Visual Studio Code
+echo "Installing Visual Studio Code..."
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt update
+sudo apt install code -y
+
+# Opruimen
+rm microsoft.gpg
+
+echo "Visual Studio Code installation complete."
+echo "##########################################################"
+echo "Install Github Desktop " #
+sleep 2
+wget -O github-desktop.deb https://github.com/shiftkey/desktop/releases/download/release-2.8.3-linux1/GitHubDesktop-linux-2.8.3-linux1.deb
+sudo dpkg -i github-desktop.deb
+sudo apt install -f
 echo ""
 echo ""
 echo "##########################################################"
@@ -223,4 +282,3 @@ echo "##########################################################"
 #echo ""
 #echo ""
 #echo "##########################################################"
-
