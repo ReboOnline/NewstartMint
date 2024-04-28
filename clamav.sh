@@ -10,3 +10,9 @@ sudo apt install clamav clamav-daemon -y
 sudo freshclam
 
 echo "ClamAV is geïnstalleerd en bijgewerkt."
+
+# Om een volledige systeemscan uit te voeren:
+#sudo clamscan -r /
+
+# Om een specifieke map te scannen (bijvoorbeeld je thuismap):
+#clamscan -r /home/gebruikersnaam
