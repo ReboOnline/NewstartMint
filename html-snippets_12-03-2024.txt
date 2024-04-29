@@ -444,14 +444,29 @@
 // codespandark is for code display on the webpage
 
 // xmp is for code display on the webpage
+// "xmp-code": {
+// 	"prefix": "xmp-code",
+// 	"body": [
+// 	  "<pre><code>",
+// 	  "<xmp>",
+// 	  "${1:}",
+// 	  "</xmp>",
+// 	  "</code></pre>",
+// 	],
+// 	"description": "xmp-code"
+//   }
+// xmp is for code container display on the webpage
+// xmp is for code container display on the webpage
 "xmp-code": {
 	"prefix": "xmp-code",
 	"body": [
-	  "<pre><code>",
-	  "<xmp>",
-	  "${1:}",
-	  "</xmp>",
-	  "</code></pre>",
+	"<div class='code-container'>",
+    "<pre>",
+     " <code>",
+	  "${1:Hier snippet XMP of begin met typen}",
+      "</code>",
+    "</pre>",
+  "</div>",
 	],
 	"description": "xmp-code"
   }
@@ -670,4 +685,3 @@
 // BoxIndex
 
 }
-
