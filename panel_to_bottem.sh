@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Maak een back-up van het originele bestand
-sudo cp /usr/share/cinnamon/theme/cinnamon.css /usr/share/cinnamon/theme/cinnamon.css.bak
+# Maak een kopie van cinnamon.css om in te bewerken
+cp /usr/share/cinnamon/theme/cinnamon.css ~/.config/cinnamon/cinnamon.css
 
 # Maak een nieuw css-bestand met de gewenste aanpassingen
 echo '
 #panel {
     background-color: rgba(0,0,0,0) !important;
     border: 1px solid #000; /* Zwarte rand */
-    border-radius: 10px; /* Maakt de hoeken afgerond met een straal van 10 pixels */
-    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8; /* Verwijder schaduw */
+    border-radius: 0; /* Maak de randen recht */
+    box-shadow: none; /* Verwijder schaduw */
     font-size: 11pt; /* Pas de lettergrootte aan */
     padding: 2px; /* Pas de opvulling aan */
     position: fixed; /* Plaats de taakbalk vast */
@@ -26,7 +26,7 @@ echo '
 #panel .button-box:hover {
     background-color: #4caf50 !important;
 }
-' | sudo tee -a /usr/share/cinnamon/theme/cinnamon.css > /dev/null
+' >> ~/.config/cinnamon/cinnamon.css
 
 # Herstart Cinnamon om de wijzigingen toe te passen
 cinnamon --replace &
