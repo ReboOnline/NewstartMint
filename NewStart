@@ -157,41 +157,23 @@ echo ""
 echo ""
 echo "##########################################################"
 echo "Install Plank" #Plank is an good icon dock 
-# Installeer plank
-sudo apt update
-sudo apt install -yy plank
-
-# Voeg plank toe aan de opstarttoepassingen
-echo "[Desktop Entry]
-Type=Application
-Exec=plank
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name[en_US]=Plank
-Name=Plank
-Comment[en_US]=Plank Dock
-Comment=Plank Dock" | tee ~/.config/autostart/plank.desktop
-
-# Configureer plank om aan de linkerkant van het scherm te plaatsen
-gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ alignment 'left'
-#sleep 2
-#sudo apt install plank -yy
-#sleep 1
-# Now we can copy the file using the 'cp' command
-#echo "Now we can copy the file using the 'cp' command"
-#sleep 2
-#cp plank.desktop ~/.config/autostart
-#echo "Checking if the copy was successful"
-#sleep 3
-# Check if the copy was successful
-#if [ $? -eq 0 ]; then
-#  echo "File successfully copied"
-#else
-#  echo "Error copying file"
-#fi
-#echo ""
-#echo ""
+sleep 2
+sudo apt install plank -yy
+sleep 1
+Now we can copy the file using the 'cp' command
+echo "Now we can copy the file using the 'cp' command"
+sleep 2
+cp plank.desktop ~/.config/autostart
+echo "Checking if the copy was successful"
+sleep 3
+Check if the copy was successful
+if [ $? -eq 0 ]; then
+ echo "File successfully copied"
+else
+ echo "Error copying file"
+fi
+echo ""
+echo ""
 echo "##########################################################"
 echo "Install Nemo" #Neno is an simple but good commandline editor
 sleep 2

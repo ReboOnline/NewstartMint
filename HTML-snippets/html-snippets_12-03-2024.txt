@@ -1,0 +1,673 @@
+
+//naamvak begin
+
+//naamvak end
+{
+	// "Print box1": {
+	// 	"prefix": "box1",
+	// 	"body": [
+	// 		"<!--afspraken box met CheckBOX-->",
+	// 		"<h3>${1:hier de datum}</h3>",
+	// 		"<h4>${2:Hier het onderwerp}</h4>",
+			// "<label class='container'><h4>${2:Hier het onderwerp}</h4>",
+			// "<input type='checkbox' checked='checked'>",
+			// "<span class='checkmark'></span>",
+			// "</label>",
+		// 	"",
+		// 	"",
+		// 		"<p><b>${3:}</b></p>",
+		// 	"",
+		// 	"",
+		// 	"<hr>",
+		// 	"<!--afspraken box met CheckBOX-->",
+		// ],
+		// "description": "box1 2 li Rebo"
+		// },
+
+// income contole snippets
+
+"Print income Grid": {
+	"prefix": "income Grid",
+	"body": [
+	  "   <!-- table income Rebo -->",
+	  "    <table class=\"content-table\">",
+	  "      <thead>",
+	  "        <tr>",
+	  "          <th>Datum</th>",
+	  "          <th>Levrancier</th>",
+	  "          <th>Deno NR</th>",
+	  "          <th>Order NR</th>",
+	  "          <th>Opmerking</th>",
+	  "        </tr>",
+	  "      </thead>",
+	  "      <tbody>",
+	  "        <!-- <tr class=\"active-row\">",
+	  "         //////// Snippit \"2table\" /////////-->",
+	  "          <tr>",
+	  "          <td></td>",
+	  "          <td></td>",
+	  "          <td></td>",
+	  "          <td></td>",
+	  "          <td></td>",
+	  "        </tr>",
+	  "    </tbody>",
+	  "    </table>",
+	  "   <!-- table income Rebo -->",
+	],
+	"description": "income Rebo"
+  },
+//brgin comment
+		"Print comment": {
+			"prefix": "comment", 
+			"body": [
+			  "<!-- table comment Rebo -->",
+			  "<table class=\"content-table\">",
+			  "  <thead>",
+			  "    <tr class=\"active-row\">",
+	//		  "      <th>Datum</th>",
+			  "      <th>${1:Date} | ${2:Wat}</th>",
+			  "    </tr>",
+			  "  </thead>",
+			  "  <tbody>",
+			  " <!-- Hieronder een snippet 'TR1' met dd, dd-bleu, ulli, olli, spanColor1 -->",
+			  "",
+			  "${3:}",
+			  "",
+			  "  </tbody>",
+			  "  </table>"
+			  "<!-- table comment Rebo -->",
+			],
+			"description": "income comment Rebo"
+		  },
+//end comment
+
+//begin comment 2
+"Print comment2": {
+	"prefix": "comment2", 
+	"body": [
+	  "<!-- table comment Rebo -->",
+	  "<table class=\"content-table\">",
+	  "  <thead>",
+	  "    <tr class=\"active-row\">",
+	  "<th>Omschrijving</th>",
+	  "<th>Foto</th>",
+	  "    </tr>",
+	  "  </thead>",
+	  "  <tbody>",
+	  " <!-- Hieronder een snippet 'TR2' met dd, dd-bleu, ulli, olli, spanColor1 -->",
+	  "",
+	  "${3:}",
+	  "",
+	  "  </tbody>",
+	  "  </table>"
+	  "<!-- table comment Rebo -->",
+	],
+	"description": "income comment Rebo"
+  },
+//end comment 2
+
+
+
+		  "Print steekproef rebo": {
+			"prefix": "steekproef rebo", // nieuwe table voor de steekproef
+			"body": [
+				"<tr>",
+					"<td>${1:datum}</td>",
+					"<td>${2:order nr}</td>",
+					"<td>${3:artikel nr}</td>",
+					"<td>${4:serie nr}</td>",
+					"<td>${5:-}</td>",
+				"</tr>",
+			],
+			"description": "Table Steekproef"
+			},
+
+			"Print income-row": {
+				"prefix": "income-row", // nieuwe table voor de income
+				"body": [
+					"<tr>",
+						"<td>${1:datum}</td>",
+						"<td>${2:Leverancier}</td>",
+						"<td>DENO-IO.${3:}</td>",
+						"<td>${4:Order NR}</td>",
+						"<td>${5:-}</td>",
+					"</tr>",
+				],
+				"description": "income-row REBO"
+				},
+
+// income contole snippets
+
+
+// Rebo list snippets
+
+		"Print ul li": {
+			"prefix": "ulli", //ulli
+			"body": [
+				"<ul>",
+				"<li>${1:}</li>",
+				"</ul>",
+				
+			],
+			"description": "UN_Ordered List Rebo"
+			},
+
+			"Print spanGreenColor": {
+				"prefix": "spanGreenColor", //spanColorGreen
+				"body": [
+					"<span style='color: var(--blue);'>${1:#}</span>",
+					
+				],
+				"description": "Span Color Green"
+				},
+
+			"Print spanBlueColor": {
+				"prefix": "spanBlueColor", //spanColorBlue
+				"body": [
+					"<span style='color: var(--blue);'>${1:#}</span>",
+					
+				],
+				"description": "Span Color blue"
+				},
+
+
+				"Print spanDarkColor": {
+					"prefix": "spanDarkColor", //spanColorDark
+					"body": [
+						"<span style='color: var(--dark);'>${1:#}</span>",
+						
+					],
+					"description": "Span Color Dark"
+					},
+
+				
+
+
+			"Print ol li": {
+				"prefix": "olli", //olli
+				"body": [
+					"<ol>",
+					"<li>${1:}</li>",
+					"</ol>",
+					
+				],
+				"description": "Ordered List Rebo"
+				},
+
+				"Print dl dt dd": {
+					"prefix": "dlli", //dlli
+					"body": [
+						"<dl>",
+							"<dt><b>${1:}</b></dt>",
+								"<dd>${2:}</dd>",
+						"</dl>",
+					],
+					"description": "Description List Rebo"
+					},
+
+							"Print dd blue": {
+								"prefix": "dd-blue", //dd-blue
+								"body": [
+											"<dd style='color: var(--blue)'><i>${1:}</i></dd>",
+								],
+								"description": "dd in blue Rebo"
+								},
+						
+								"Print tr1 comment list": {
+									"prefix": "tr1 comment list", //tr1 comment list is voor een nieuw gesprek in de snippet "comment"
+									"body": [
+										""
+										"<tr>",
+										"	<td>",
+										"<h5>${1:Datum}</h5>",
+										"		<h4>${2:Onderwerp}</h4>",
+										"		${3:#}"
+										"		</td>",
+										"</tr>",
+										"<!-- Hieronder een snippet 'TR1' met dd, dd-bleu, ulli, olli, spanColor1 -->",
+									],
+									"description": "tr1 List Rebo"
+									},
+
+									"Print tr2 tutorial list": {
+										"prefix": "tr2 tutorial list", //tr2 list is voor een foto tutorial
+										"body": [
+											"<tr>",
+											"	<td>",
+											"Hier een text",
+											"	</td>",
+											"	<td>",
+											"hier komt een foto",
+											"	</td>",
+											"</tr>",
+											"<!--Hieronder een snippet 'TR2' met dd, dd-bleu, ulli, olli, spanColor1 -->",	
+										],
+										"description": "tr2 tutorial List"
+										},
+			
+
+					
+// Rebo list snippets
+
+//MMB Notebook sinppets Begin
+
+//naamvak
+"Naamvak": {
+	"prefix": "NaamVak", //NaamVak
+	"body": [
+		"<code><span style='color: var(--dark);'>${1:NaamVak}</span></code>",
+		
+	],
+	"description": "NaamVak"
+	},
+//naamvak
+
+//MMB Notebook snippets End
+
+			
+
+			
+
+			  "een_block_page": {
+				"prefix": "1doctype",
+				"body": [
+				  "<!DOCTYPE html>",
+				  "<html lang=\"en\">",
+				  "<head>",
+				  "    <meta charset=\"UTF-8\">",
+				  "    <meta name=\"description\" content=\"Notes and more\">",
+				  "    <meta name=\"keywords\" content=\"HTML, CSS, JavaScript\">",
+				  "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+				  "    <link rel=\"stylesheet\" href=\"#\">",
+				  "    <meta name='author' content='The World of Rebo'>",
+				  "",
+				  "    <title>${1:begin hier}</title>",
+				  "</head>",
+				  "<body>",
+				  "  <div class=\"wrapper\">",
+				  "    <!-- Navigation -->",
+				  "    <nav class=\"main-nav\">",
+				  "      <ul>",
+				  "        <li>",
+				  "          <a href=\"#\">#</a>",
+				  "        </li>",
+				  "        <li>",
+				  "          <a href=\"#\">#</a>",
+				  "        </li>",
+				  "       <li>",
+				  "          <a href=\"#\">#</a>",
+				  "        </li>",
+				  "      </ul>",
+				  "    </nav>",
+				  "",
+				  "    <!-- Info Section één_block -->",
+				  "    <section class=\"info\">",
+				  "      <div>",
+			//	  "        <h2>${2:begin hier}</h2>",
+				  "<a href='#' class='top-button'>${2:begin hier}</a>",
+				  "",
+
+				  "					<!--",
+				  "					<b>bold text",
+				  "					<i>italic text",
+				  "					<del>is doorgestreept",
+				  "					<ins> is onderstreept",
+				  "					<span style='color: var(--blue);'>#</span>",
+				  " ----Hier onder de snippet 'comment' en vul deze aan met 'dd' en '1dd als een antwoord' --------->",
+				  "",
+				  "",
+				  "${3:begin hier met een TekstBox}",
+				  "",
+				  "",
+				  "                 ",
+				  "",
+				  " ",
+				  "",
+				  "",
+				  "",
+				  "      <a href=\"#\" class=\"button\">Back to top</a>",
+				  "      </div>",
+				  "    </section>",
+				  "",
+				  "<!-- Info Section één_block -->",
+				  "",
+				  "   ",
+				  "",
+				  "    <!-- Footer -->",
+				  "    <footer>",
+				  "      <p>The World of Rebo &copy; 2020</p><a href=\"#\" class=\"button\">Home</a>",
+				  "    </footer>",
+				  "",
+				  "  </div>",
+				  "  <!-- Wrapper Ends -->",
+				  "</body>",
+				  "</html>"
+				],
+				"description": "Doctype-Rebo_One_Page"
+			  },
+
+//laatste test box Q-meeting
+"Print Q1-meeting": {
+	"prefix": "Q1-meeting", //nieuwe box Q-meeting
+	"body": [
+	  "<!-- nieuwe box Q-meeting -->",
+		  "<h3>Goed nieuws</h3>",
+	  "<ol>",
+	  "<li><b>René</b></li>",
+	  "<dd>#</dd>",
+	  "<br>",
+	  "<li><b>Bart</b></li>",
+	  "<dd>#</dd>",
+	  "<br>",
+	  "<li><b>Onno</b></li>",
+	  "<dd>#</dd>",
+	  "<br>",
+	  "<li><b>Michel</b></li>",
+	  "<dd>#</dd>",
+	  "<br>",
+	  "<li><b>Jan</b></li>",
+	  "<dd>#</dd>",
+	  "<br>",
+	  "</ol>",
+	  "<br>",
+	  "",
+	  "",
+	  "",,
+		  "<h3>Klanten klachten</h3>", 
+		  "<ul><li>#",
+		  "<dd>#</dd>",
+	  		"</li></ul>",
+	  "<br>",
+	  "",
+	  "",
+	  "",
+		  "<h3>A&D log Weekly Quality Meeting.xlsm</h3>",
+		  "<ul><li>#",
+		  "<dd>#</dd>",
+	  		"</li></ul>",
+	  "<br>",
+	  "",
+	  "",
+	  "",
+		  "<h3>Kansen en uitdagingen</h3>",
+		  "<ol>",
+		  "<li><b>René</b></li>",
+		  "<dd>#</dd>",
+		  "<br>",
+		  "<li><b>Bart</b></li>",
+		  "<dd>#</dd>",
+		  "<br>",
+		  "<li><b>Onno</b></li>",
+		  "<dd>#</dd>",
+		  "<br>",
+		  "<li><b>Michel</b></li>",
+		  "<dd>#</dd>",
+		  "<br>",
+		  "<li><b>Jan</b></li>",
+		  "<dd>#</dd>",
+		  "<br>",
+		  "</ol>",
+		  "<br>",	  
+	  "",
+	  "",
+	  "<hr>",
+	  "		 </td>",
+	  "     </tr>",
+	  "<!-- nieuwe box Q-meeting -->",
+	],
+	"description": "income comment Rebo"
+  },
+//laatste test box Q-meeting
+
+// xmp is for code display on the webpage
+"xmp": {
+	"prefix": "xmp",
+	"body": [
+	  "<span style='color: var(--blue);'><xmp>",
+	  "${1:}",
+	  "</xmp></span>",
+	],
+	"description": "xmp"
+  }
+// xmp is for code display on the webpage
+
+// codespandark is for code display on the webpage
+"CodeVakBlue": {
+	"prefix": "CodeVakBlue",
+	"body": [
+	  "<code><span style='color: var(--blue);'>${1:}</span></code>",
+	  "",
+	  "",
+	],
+	"description": "CodeVakBlue"
+  }
+// codespandark is for code display on the webpage
+
+// xmp is for code display on the webpage
+"xmp-code": {
+	"prefix": "xmp-code",
+	"body": [
+	  "<pre><code>",
+	  "<xmp>",
+	  "${1:}",
+	  "</xmp>",
+	  "</code></pre>",
+	],
+	"description": "xmp-code"
+  }
+// xmp is for code display on the webpage
+
+// colorvak is voor een box met een randje
+  "colorvak": {
+	"prefix": "colorvak",
+	"body": [
+	  " ",
+	  "<code><span style='color: var(--dark);'> <span style='color: var(--blue);'>${1:#}</span></code>",
+	  "<br>",
+	  "<br>",
+	  "<dd>",
+	  "<strong style='color: var(--green);'>${2:#}</strong><br>",
+	  "${3:#}",
+	  "</dd>",
+	  "<br>",
+	  "<hr>",
+	  "<br>",
+	  "",
+	  "<!--Hieronder een snippet 'colorvak' met strongBR, li-strong, dd-strong, codeblue, aReboBlue,", 
+	  "imgRebo, spanBleuColor, xmp, xmp-code, codespandark, ulli, olli -->",
+	  "",
+	  "",
+	],
+	"description": "colorvak"
+  }
+  // colorvak is voor een box met een randje
+  
+//   codeblue is voor een HomeButten
+"CodeHomeButton": {
+	"prefix": "CodeHomeButton",
+	"body": [
+	  "<code><span><a href=\"${2:#}\"><span style='color: var(--blue);'>Home ${1:#}</span></a></span></code>"
+	],
+	"description": "CodeHomeButton"
+  }
+//   codeblue is voor een HomeButten
+
+  // nieuwe dd-strong
+"dd-strong": {
+	"prefix": "dd-strong",
+	"body": [
+		"<br>",
+		"",
+		"<dd><strong>${1:}:</strong><br>",
+		"${2:}",
+		"</dd>",
+		"<br>",
+	],
+	"description": "dd-strong"
+  }
+// nieuwe dd-strong
+
+  // nieuwe strongBR
+  "strongBR": {
+	"prefix": "strongBR",
+	"body": [
+		"<br>",
+		"",
+		"<strong style='color: var(--green);'>${1:#}:</strong><br>",
+		"${2:#} <br>",
+	],
+	"description": "strongBR"
+  }
+// nieuwe strongBR
+
+// nieuwe HR-dashed-green
+"hr-dashed-green": {
+	"prefix": "hr-dashed-green",
+	"body": [
+		"<br>",
+		"<hr class='dashed'>",
+		"<br>",
+	],
+	"description": "hr-dashed-green"
+  }
+// nieuwe HR-dashed-green
+
+// Tab for space in de code
+
+"Tab1": {
+	"prefix": "Tab1",
+	"body": [
+	  "&#8201;"
+	],
+	"description": "Tab1"
+  }
+
+  "Tab2": {
+	"prefix": "Tab2",
+	"body": [
+	  "&#8194;"
+	],
+	"description": "Tab2"
+  }
+
+  "Tab3": {
+	"prefix": "Tab3",
+	"body": [
+	  "&#8195; &#8195;<span style='color: var(--blue);'>${1:#}:</span>"
+	],
+	"description": "Tab3"
+  }
+
+
+// Tab for space in de code
+
+  // nieuwe ulli-strong
+  "ulli-strong": {
+	"prefix": "ulli-strong",
+	"body": [
+		"",
+		"<br>",
+		"<ul>",
+		"<li><strong>${1:}:</strong><br>",
+		"${2:}",
+		"</li>",
+		"</ul>",
+		"",
+	],
+	"description": "ulli-strong"
+  }
+// nieuwe ulli-strong
+
+// qcolorvak = dd-strong voor de Q-meeting
+
+"qcolorvak": {
+	"prefix": "qcolorvak",
+	"body": [
+	  "<code><span style='color: var(--dark);'> <span style='color: var(--blue);'>${1:#}</span></code>",
+	  "<br>",
+	  "<br>",
+	  "<h3>Goede nieuws</h3>",
+	  "<dd><strong style='color: var(--green);'></strong><br>",
+	  "",
+	  "</dd>",
+	  "<br>",
+	  "",
+	  "<h3>Klanten klachten</h3>",
+	  "<dd><strong style='color: var(--green);'></strong><br>"
+	  "",
+	  "</dd>",
+	  "<br> ",
+	  "",
+	  "<h3>MANAGEMENT OF SCRAP</h3>",
+	  "<dd><strong style='color: var(--green);'></strong><br>",
+	  "",
+	  "</dd>",
+	  "<br>",
+	  "",
+	  "<h3>A&D log Weekly Quality Meeting.xlsm</h3>",
+	  "<dd><strong style='color: var(--green);'></strong><br>",
+	  "",
+	  "</dd>",
+	  "<br>",
+	  "",
+	  "<h3>Kansen en uitdagingen</h3>",
+	  "<dd><strong style='color: var(--green);'></strong><br>",
+	  "",
+	  "</dd> ",
+	  "<br>",
+	  "<hr>",
+	  "<!--Hieronder een snippet 'colorvak' met strongBR, li-strong, dd-strong, codeblue, aReboBlue,", 
+	  "imgRebo, spanBleuColor, xmp, xmp-code, codespandark, ulli, olli -->",
+	  "<br>",
+
+	],
+	"description": "qcolorvak"
+  }
+  // qcolorvak = dd-strong voor de Q-meeting
+
+  "imgRebo": {
+	"prefix": "imgRebo",
+	"body": [
+	  "      <a target=\"_blank\" href=\"${1:../../Media/images/}\">",
+	  "        <img src=\"${2:../../Media/images/}\" alt=\"Cinque Terre\" width=\"600\" height=\"400\"></a>",
+	],
+	"description": "imgRebo"
+  }
+//   aReboBlue
+  "aReboBlue": {
+	"prefix": "aReboBlue",
+	"body": [
+	  "<a class='Body-Link' href='${2:#}'>${1:#}</a>"
+	],
+	"description": "aReboBlue"
+  }
+//   aReboBlue
+
+// BoxIndex
+
+"boxIndex": {
+	"prefix": "boxIndex",
+	"body": [
+	  "      <!--box-->",
+	  "      <div class=\"box\">",
+	  "        <i class=\"fas fa-chart-pie fa-4x\"></i>",
+	  "        <h3>${1:Lorem}</h3>",
+	  "        <div class=\"dropdown\">",
+	  "          <button class=\"dropbtn\"><a class=\"aBTN\" href=\"#\">Click me</a></button>",
+	  "          <div class=\"dropdown-content\">",
+	  "            <a href=\"#\">#</a>",
+	  "            <a href=\"#\">#</a>",
+	  "            <a href=\"#\">#</a>",
+	  "          </div>",
+	  "        </div>",
+	  "        <br>",
+	  "      </div>",
+	  "      <!--box-->"
+	],
+	"description": "boxIndex"
+  }
+
+// BoxIndex
+
+}
+
