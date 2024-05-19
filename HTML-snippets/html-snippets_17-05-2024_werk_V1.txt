@@ -1,0 +1,485 @@
+{
+	"Gallery": {
+	  "prefix": "gallery_Rebo",
+	  "body": [
+		"<div class=\"gallery\">",
+		"<a target=\"blank\" href=\"../../Media/${1:#}\">",
+		"<img src=\"../../Media/${2:#}\" alt=\"${3:#}\">",
+		"</a>",
+		"<div class=\"description\">${4:Photo discription}</div>",
+		"</div>",
+		"<br>",
+		"<br>",
+		"<!-- Gallery foto -->"
+	  ],
+	  "description": "Gallery met discription"
+	},
+	"H3_color": {
+	  "prefix": "H3 color",
+	  "body": [
+		"<H3><span style='color: var(--${2|green,blue,red,mydark,shadow,primary,info,nav|});'>${3:#}</span></H3>"
+	  ],
+	  "description": "H3_color"
+	},
+	"btnsection_REBO": {
+	  "prefix": "btnSection-REBO",
+	  "body": [
+		"<section class='custom-section'>",
+		"${1:}",
+		"</section>"
+	  ],
+	  "description": "custom-section-rebo"
+	},
+	"Begin list met Arrow": {
+	  "prefix": "list-Arrow",
+	  "body": [
+		"<span>&#8226;</span> &#8201; ${1:#} <br>",
+		"&#8195; <span class=\"arrow\">&rarr;</span> &#8195; ${2:#} <br>"
+	  ],
+	  "description": "Begin list met Arrow"
+	},
+	"Arrow voor de list Arrow": {
+	  "prefix": "Arrow",
+	  "body": [
+		"&#8195; <span class=\"arrow\">&rarr;</span> &#8195; ${1:#} <br>"
+	  ],
+	  "description": "Arrow voor de list-Arrow"
+	},
+	"Rebo CopyButton": {
+	  "prefix": "btnCopy-REBO",
+	  "body": [
+		"<xmp id=\"copyText${1:knopnummer}\" style=\"display: none;\">${3:Your teks}</xmp> <button class=\"copyBtn\" id=\"copyBtn${2:knopnummer}\"></button>"
+	  ],
+	  "description": "Rebo CopyButton"
+	},
+	"NavBTN": {
+	  "prefix": "btnNAV-REBO",
+	  "body": [
+		"<a href='${2:}' class='navButton'>${1:}</a>"
+	  ],
+	  "description": "NavBTN voor link"
+	},
+	"Print ul li": {
+	  "prefix": "ulli",
+	  "body": [
+		"<ul>",
+		"<li>${1:}</li>",
+		"</ul>"
+	  ],
+	  "description": "UN_Ordered List Rebo"
+	},
+	"Print spanColor-REBO": {
+	  "prefix": "spanColor-Rebo",
+	  "body": [
+		"<span style='color: var(--${2|green,blue,red,mydark,shadow,primary,info,nav|});'>${3:#}</span>"
+	  ],
+	  "description": "Span Color Green"
+	},
+
+	"Print ol li": {
+	  "prefix": "olli-3",
+	  "body": [
+		"<ol>",
+		"<li>${1:}</li>",
+		"</ol>"
+	  ],
+	  "description": "Ordered List Rebo"
+	},
+	"Print dl dt dd": {
+	  "prefix": "dlli",
+	  "body": [
+		"<dl>",
+		"<dt><b>${1:}</b></dt>",
+		"<dd>${2:}</dd>",
+		"</dl>"
+	  ],
+	  "description": "Description List Rebo"
+	},
+	"Print dd blue": {
+	  "prefix": "dd-blue",
+	  "body": [
+		"<dd style='color: var(--blue)'><i>${1:}</i></dd>"
+	  ],
+	  "description": "dd in blue Rebo"
+	},
+	"Print tr1 comment list": {
+	  "prefix": "tr1 comment list",
+	  "body": [
+		"<tr>",
+		"<td>",
+		"<h5>${1:Datum}</h5>",
+		"<h4>${2:Onderwerp}</h4>",
+		"${3:#}",
+		"</td>",
+		"</tr>",
+		"<!-- Hieronder een snippet 'TR1' met dd, dd-bleu, ulli, olli, spanColor1 -->"
+	  ],
+	  "description": "tr1 List Rebo"
+	},
+	"Print tr2 tutorial list": {
+	  "prefix": "tr2 tutorial list",
+	  "body": [
+		"<tr>",
+		"<td>",
+		"Hier een text",
+		"</td>",
+		"<td>",
+		"hier komt een foto",
+		"</td>",
+		"</tr>",
+		"<!--Hieronder een snippet 'TR2' met dd, dd-bleu, ulli, olli, spanColor1 -->"
+	  ],
+	  "description": "tr2 tutorial List"
+	},
+	"Naamvak": {
+	  "prefix": "NaamVak",
+	  "body": [
+		"<code><span style='color: var(--dark);'>${1:NaamVak}</span></code>"
+	  ],
+	  "description": "NaamVak"
+	},
+
+	"xmp": {
+	  "prefix": "xmp",
+	  "body": [
+		"<span style='color: var(--blue);'><xmp>",
+		"${1:}",
+		"</xmp></span>"
+	  ],
+	  "description": "xmp"
+	},
+	"xmp-code": {
+	  "prefix": "xmp-code",
+	  "body": [
+		"<div class='code-container'>",
+		"<pre>",
+		" <code>",
+		"${1:Hier snippet XMP of begin met typen}",
+		"</code>",
+		"</pre>",
+		"</div>"
+	  ],
+	  "description": "xmp-code"
+	},
+	"colorvak": {
+	  "prefix": "colorvak",
+	  "body": [
+		" ",
+		"<a href='${2:}' class='navButton'>${1:}</a>",
+		"<br>",
+		"<br>",
+		"<dd>",
+		"<ul style=\"color: var(--${3|green,blue,red,mydark,shadow,primary,info,nav|}); list-style-type: none\">",
+            "  <li>${4:Lorem ipsum}",
+            "    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+            "         <li><span style=\"color: var(--primary);\">${5:Lorem, ipsum dolor.}</span></li>",
+            "      </ul>",
+            "  </li>",
+            "</ul>",
+		"</dd>",
+		"<br>",
+		"<hr>",
+		"<!--Hieronder een snippet 'colorvak' met strongBR, dd-strong, aReboBlue,",
+		"btnCopy-REBO, btnNAV-REBO, btnSection-REBO, list-Arrow, Arrow, imgRebo, spanBleuColor, xmp, ulli, olli -->",
+		""
+	  ],
+	  "description": "colorvak"
+	},
+	"CodeHomeButton": {
+	  "prefix": "CodeHomeButton",
+	  "body": [
+		"<code><span><a href=\"${2:#}\"><span style='color: var(--blue);'>Home ${1:#}</span></a></span></code>"
+	  ],
+	  "description": "CodeHomeButton"
+	},
+	"dd-strong": {
+	  "prefix": "dd-strong",
+	  "body": [
+		"<br>",
+		"",
+		"<dd><strong>${1:}:</strong><br>",
+		"${2:}",
+		"</dd>",
+		"<br>"
+	  ],
+	  "description": "dd-strong"
+	},
+	"strongBR": {
+	  "prefix": "strongBR",
+	  "body": [
+		"<br>",
+		"",
+		"<strong style='color: var(--${2|green,blue,red,mydark,shadow,primary,info,nav|});'>${1:#}:</strong><br>",
+		"${2:#} <br>"
+	  ],
+	  "description": "strongBR"
+	},
+	"hr-dashed-green": {
+	  "prefix": "hr-dashed-green",
+	  "body": [
+		"<br>",
+		"<hr class='dashed'>",
+		"<br>"
+	  ],
+	  "description": "hr-dashed-green"
+	},
+	"Tab1": {
+	  "prefix": "Tab1",
+	  "body": [
+		"&#8201;"
+	  ],
+	  "description": "Tab1"
+	},
+	"Tab2": {
+	  "prefix": "Tab2",
+	  "body": [
+		"&#8194;"
+	  ],
+	  "description": "Tab2"
+	},
+	"Tab3": {
+	  "prefix": "Tab3",
+	  "body": [
+		"&#8195; &#8195;"
+	  ],
+	  "description": "Tab3"
+	},
+	"ulli-strong": {
+	  "prefix": "ulli-strong",
+	  "body": [
+		"",
+		"<br>",
+		"<ul>",
+		"<li><strong>${1:}:</strong><br>",
+		"${2:}",
+		"</li>",
+		"</ul>",
+		""
+	  ],
+	  "description": "ulli-strong"
+	},
+	"olli-strong": {
+	  "prefix": "olli-strong",
+	  "body": [
+		"",
+		"<br>",
+		"<ol>",
+		"<li><strong>${1:}:</strong><br>",
+		"${2:}",
+		"</li>",
+		"</ol>",
+		""
+	  ],
+	  "description": "ulli-strong"
+	},
+	"qcolorvak": {
+	  "prefix": "qcolorvak",
+	  "body": [
+		"<a href=\"\" class='navButton'>${1:Date}</a>",
+		"<br>",
+		"<br>",
+		"<h3>Goede nieuws</h3>",
+		"<dd>",
+		"<ul style=\"color: var(--green); list-style-type: none\">",
+        "  <li>René",
+        "    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+        "         <li><span style=\"color: var(--primary);\">${2:Lorem}</span></li>",
+        "      </ul>",
+        "  </li>",
+        "</ul>",
+		"",
+		"</dd>",
+		"<br>",
+		"<!--",
+		"<h3>Klanten klachten</h3>",
+		"<dd>",
+		"<ul style=\"color: var(--green); list-style-type: none\">",
+        "  <li>René",
+        "    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+        "         <li><span style=\"color: var(--primary);\">##</span></li>",
+        "      </ul>",
+        "  </li>",
+        "</ul>",
+		"-->",
+		"",
+		"<!--",
+		"</dd>",
+		"<br> ",
+		"<h3>MANAGEMENT OF SCRAP</h3>",
+		"<dd>",
+		"<ul style=\"color: var(--green); list-style-type: none\">",
+        "  <li>René",
+        "    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+        "         <li><span style=\"color: var(--primary);\">##</span></li>",
+        "      </ul>",
+        "  </li>",
+        "</ul>",
+		"-->",
+		"",
+		"<!--",
+		"</dd>",
+		"<br>",
+		"<h3>A&D log Weekly Quality Meeting.xlsm</h3>",
+		"<dd>",
+		"<ul style=\"color: var(--green); list-style-type: none\">",
+        "  <li>René",
+        "    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+        "         <li><span style=\"color: var(--primary);\">##</span></li>",
+        "      </ul>",
+        "  </li>",
+        "</ul>",
+		"-->",
+		"",
+		"</dd>",
+		"<br>",
+		"<h3>Kansen en uitdagingen</h3>",
+		"<dd>",
+		"<ul style=\"color: var(--green); list-style-type: none\">",
+        "  <li>René",
+        "    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+        "         <li><span style=\"color: var(--primary);\">##</span></li>",
+        "      </ul>",
+        "  </li>",
+        "</ul>",
+		"",
+		"</dd> ",
+		"<br>",
+		"<hr>",
+		"<!--Hieronder een snippet 'colorvak' met strongBR, li-strong, dd-strong, codeblue, aReboBlue,",
+		"imgRebo, spanBleuColor, xmp, xmp-code, codespandark, ulli, olli -->",
+		"<br>"
+	  ],
+	  "description": "qcolorvak"
+	},
+	"imgRebo": {
+	  "prefix": "imgRebo",
+	  "body": [
+		"      <a target=\"_blank\" href=\"${1:../../Media/images/}\">",
+		"        <img src=\"${2:../../Media/images/}\" alt=\"Cinque Terre\" width=\"400\" height=\"200\"></a>"
+	  ],
+	  "description": "imgRebo"
+	},
+	"aReboBlue": {
+	  "prefix": "aReboBlue",
+	  "body": [
+		"<a class=\"Body-Link\" href=\"${2:#}\" target=\"_blank\" rel=\"noopener noreferrer\">${1:#}</a>"
+	  ],
+	  "description": "aReboBlue"
+	},
+	"boxIndex": {
+	  "prefix": "boxIndex",
+	  "body": [
+		"      <!--box-->",
+		"      <div class=\"box\">",
+		"        <i class=\"fas fa-chart-pie fa-4x\"></i>",
+		"        <h3>${1:Lorem}</h3>",
+		"        <div class=\"dropdown\">",
+		"          <button class=\"dropbtn\"><a class=\"aBTN\" href=\"#\">Click me</a></button>",
+		"          <div class=\"dropdown-content\">",
+		"            <a href=\"#\">#</a>",
+		"            <a href=\"#\">#</a>",
+		"            <a href=\"#\">#</a>",
+		"          </div>",
+		"        </div>",
+		"        <br>",
+		"      </div>",
+		"      <!--box-->"
+	  ],
+	  "description": "boxIndex"
+	},
+	"Code_tussen_haakjes": {
+	  "prefix": "Btn_Code_Rebo",
+	  "body": [
+		"&lt;${1:div}&gt;&lt;/${2:div}&gt;"
+	  ],
+	  "description": "Code_tussen_haakjes"
+	},
+
+	"Copy Text Button": {
+		"prefix": "Btn1_copytext_Rebo",
+		"body": [
+		  "<dd class=\"dd-rebo\">",
+		  "  <div class=\"gallery\">",
+		  "    <div class=\"description\">",
+		  "      ${1:#}",
+		  "    </div>",
+		  "    <xmp id=\"copyText${2:#volgnummer}\" style=\"display: none;\">",
+		  "${4:your code here}",
+		  "</xmp> <button class=\"copyBtn\" id=\"copyBtn${3:#volgnummer}\"></button>",
+		  "    <div class=\"description\">&#8593;Click to copy&#8593;</div>",
+		  "  </div>",
+		  "  <br>",
+		  "</dd>"
+		],
+		"description": "Inserts a copy text button"
+	  },
+
+	  "Ordered list": {
+		"prefix": "olli-2",
+		"body": [
+		  "<ol start=\"${1:1}\">",
+		  "  <li><span style=\"color: var(--${2|green,blue,red,mydark,shadow,primary,info,nav|});\">${3:#}</span>",
+		  "      <ul>",
+		  "          ${4:#}",
+		  "      </ul>",
+		  "  </li>",
+		  "</ol>"
+		],
+		"description": "Create an ordered list with a starting number of 4"
+	  },
+	  "Nested olli with collor titel Rebo": {
+		"prefix": "olli-1",
+		"body": [
+			"<ol start=\"${1:1}\">",
+			"  <li style=\"color: var(--${2|green,blue,red,mydark,shadow,primary,info,nav|});\">${3:#}",
+			"    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+			"         <li><span style=\"color: var(--${4|primary,green,blue,red,mydark,shadow,info,nav|});\">${5:#}</span></li>",
+			"    </ul>",
+			"  </li>",
+			"</ol>"
+		],
+		"description": "Nested olli with collor titel Rebo"
+	},
+
+	"Ulli no bullitpoints": {
+        "prefix": "ulli-1",
+        "body": [
+            "<ul style=\"color: var(--${1|green,blue,red,mydark,shadow,primary,info,nav|}); list-style-type: none\">",
+            "  <li>${2:Lorem ipsum}",
+            "    <ul style=\"list-style-type: disc; list-style-image: url('data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'12\\' height=\\'12\\' viewBox=\\'0 0 12 12\\'><line x1=\\'0\\' y1=\\'6\\' x2=\\'12\\' y2=\\'6\\' style=\\'stroke:whitesmoke;stroke-width:1\\' /></svg>');\">",
+            "         <li><span style=\"color: var(--primary);\">${3:Lorem, ipsum dolor.}</span></li>",
+            "      </ul>",
+            "  </li>",
+            "</ul>"
+        ],
+        "description": "Creates a custom list with nested items and styled list markers."
+    },
+
+
+	"Color li Rebo": {
+		"prefix": "li-1-color",
+		"body": [
+			"<li><span style=\"color: var(--${1|primary,green,blue,red,mydark,shadow,info,nav|});\">${2:#}</span></li>"
+		],
+		"description": "Color li Rebo"
+	},
+
+	"Color p Rebo": {
+		"prefix": "p-1-color",
+		"body": [
+			"<p><span style=\"color: var(--${1|primary,green,blue,red,mydark,shadow,info,nav|});\">${2:#}</span></p>"
+		],
+		"description": "Color li Rebo"
+	},
+
+	"<dd class='dd-rebo'>": {
+		"prefix": "dd-rebo",
+		"body": [
+			"<dd class=\"dd-rebo\">",
+			"${1:Lorem}",
+			"</dd>"
+		],
+		"description": "<margin-bottom: 80px;"
+	}
+
+  }
