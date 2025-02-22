@@ -2,6 +2,10 @@
 set -e  # Stop bij elke fout
 trap 'echo "❌ Er is een fout opgetreden. Het script wordt gestopt." && exit 1' ERR
 
+# Logging instellen
+LOGFILE="/var/log/custom_install_script.log"
+exec > >(tee -a "$LOGFILE") 2>&1
+
 # Functies voor eenvoudiger gebruik
 copy_file() {
     local file=$1
