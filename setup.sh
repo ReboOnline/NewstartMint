@@ -3,7 +3,7 @@ set -e  # Stop bij elke fout
 trap 'echo "❌ Er is een fout opgetreden. Het script wordt gestopt." && exit 1' ERR
 
 # Logging instellen
-LOGFILE="/var/log/custom_install_script.log"
+LOGFILE="$HOME/Documents/custom_install_script.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
 # Functies voor eenvoudiger gebruik
@@ -18,7 +18,7 @@ copy_file() {
 install_package() {
     local package=$1
     echo "📦 Installing $package..."
-    sudo apt install -yy "$package"
+    sudo apt-get install -yy "$package"
 }
 
 update_snap_packages() {
@@ -30,7 +30,7 @@ update_snap_packages() {
 auto_install_codecs() {
     echo "🔊 Installing Microsoft Media Codecs without prompts..."
     echo ubuntu-restricted-extras ubuntu-restricted-addons multiverse true | sudo debconf-set-selections
-    sudo apt install -yy ubuntu-restricted-extras
+    sudo apt-get install -yy ubuntu-restricted-extras
 }
 
 # 🔄 Bestanden kopiëren en uitvoerbaar maken
@@ -46,7 +46,7 @@ sudo sysctl -p
 
 # 🔄 Updates uitvoeren
 echo "🔄 Updating system..."
-sudo apt update && sudo apt upgrade -yy
+sudo apt-get update && sudo apt-get upgrade -yy
 update_snap_packages
 
 # 🛠️ Essentiële software installeren
@@ -72,17 +72,17 @@ echo "📥 Installing Visual Studio Code..."
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
-sudo apt update
+sudo apt-get update
 install_package "code"
 rm microsoft.gpg
 
 echo "📥 Installing Discord..."
 wget -O ~/discord.deb "https://discord.com/api/download?platform=linux&format=deb"
-sudo dpkg -i ~/discord.deb || sudo apt --fix-broken install -yy
+sudo dpkg -i ~/discord.deb || sudo apt-get --fix-broken install -yy
 
 echo "📥 Installing GitHub Desktop..."
 wget -O github-desktop.deb https://github.com/shiftkey/desktop/releases/download/release-2.8.3-linux1/GitHubDesktop-linux-2.8.3-linux1.deb
-sudo dpkg -i github-desktop.deb || sudo apt --fix-broken install -yy
+sudo dpkg -i github-desktop.deb || sudo apt-get --fix-broken install -yy
 
 # 🎶 Automatische installatie van codecs
 auto_install_codecs
@@ -91,8 +91,10 @@ auto_install_codecs
 echo "🛡️ Enabling firewall..."
 sudo ufw enable
 
+# 🔄 Logbestand van de complete instalatie:
+echo "✅ Alle installaties en updates zijn voltooid. Controleer het logbestand in Documents"
+
 # 🔄 Systeem opnieuw opstarten
 echo "✅ Alle installaties en updates zijn voltooid. Het systeem moet opnieuw opgestart worden."
 echo ""
 echo "type reboot wanneer je er klaar voor bent"
-
