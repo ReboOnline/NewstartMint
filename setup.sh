@@ -88,5 +88,7 @@ echo "🛡️ Enabling firewall..."
 sudo ufw enable
 
 # 🔄 Systeem opnieuw opstarten
-echo "✅ Alle installaties en updates zijn voltooid. Het systeem wordt opnieuw opgestart."
-sudo reboot
+echo "✅ Alle installaties en updates zijn voltooid. Het systeem moet opnieuw opgestart worden."
+echo ""
+echo "type reboot wanneer je er klaar voor bent"
+
