@@ -259,7 +259,7 @@ echo "##########################################################"
 echo "Install Htop" #this a nice commandline system monitor
 sleep 2
 sudo apt update && sudo apt upgrade -yy
-sudo apt-get htop
+sudo apt install htop -yy
 echo ""
 echo ""
 echo "##########################################################"
